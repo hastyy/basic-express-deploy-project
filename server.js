@@ -4,6 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 // Register the intent to use partials and the partials folder directory
@@ -71,4 +72,4 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log('Server is up on port 3000'));
+app.listen(PORT, () => console.log(`Server is up on port ${PORT}`));
